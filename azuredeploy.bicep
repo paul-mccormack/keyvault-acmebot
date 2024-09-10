@@ -23,7 +23,7 @@ param acmeEndpoint string = 'https://acme-v02.api.letsencrypt.org/directory'
   true
   false
 ])
-param createWithKeyVault bool = true
+param createWithKeyVault bool
 
 @description('Specifies whether the key vault is a standard vault or a premium vault.')
 @allowed([
@@ -32,8 +32,8 @@ param createWithKeyVault bool = true
 ])
 param keyVaultSkuName string = 'standard'
 
-@description('Enter the base URL of an existing Key Vault. (ex. https://example.vault.azure.net)')
-param keyVaultBaseUrl string = ''
+@description('Enter the base URL of an existing Key Vault.')
+param keyVaultBaseUrl string
 
 @description('Specifies additional name/value pairs to be appended to the functionap app appsettings.')
 param additionalAppSettings array = []
